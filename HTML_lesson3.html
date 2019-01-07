@@ -1,0 +1,53 @@
+<!-- these are the comment commands -->
+
+<!-- In the head are things, mostly connection or administrative, that help define your page or things you want your page to be able to use -->
+<head>
+	<!-- title - shows the text that will show up in the top bar of the browser window (like the tab)-->
+	<title>HTML Lesson 3</title>
+
+	<link rel="stylesheet" href="Noah.css">
+    <script src="Noah.js"></script>
+
+</head>
+<body>
+	<div class="headerDiv">
+		<span class="headerTitle">This is our third version of HTML page</span>
+	</div>
+
+	<div class="contentDIV" >  
+		<!-- good reference for some default color options: https://www.w3schools.com/colors/colors_names.asp -->
+		
+		<form>
+			<!-- Here is how you do a label -->
+			<label>Enter your name:</label><nbsp>
+
+			<!-- Here is how you do a input box -->
+			<input type="text" id="name" onkeyup="checkForm();" /><p>
+
+			<!-- Here is how you do a select box -->
+			<label>Selection your option: </label><nbsp>
+			<select name="oList" id="oList" onchange="checkForm();">
+				<option disabled selected value> -- select an option -- </option>
+				<option value="o1">option 1</option>
+				<option value="o2">option 2</option>
+				<option value="o3">option 3</option>
+				<option value="o4">option 4</option>
+			</select><p>
+
+			<!-- Here is how you do a button -->
+			<input type="button" id="button1" value="submit button" onclick="submitClicked('submit clicked');" disabled></button>
+		</form>
+	</div>
+	<div id="results" class="resultsDIV">
+	</div>
+</body>
+
+	<!-- some things to keep in mind:
+			1. layout - by default html assumes the browser will do all the necessary layout, i.e. moving things to the next line, etc..  If you see this - everything is on one line in the display.  You can force things to a new line with a <p> (paragraph) or <br> line break tags.
+
+			2. everything is very basic color, size, shape.  There are many ways to change the color, size, etc.. and we'll get to some of that - but this is the basic control and how the browser would draw it.
+
+			3. we haven't tied any logic to anything (other than the onclick method of the button).  we have to use javascript for all that and we'll get to that soon also.. 
+
+			4. the best place to see / try the base-level HTML is at http://www.w3schools.com
+	-->
