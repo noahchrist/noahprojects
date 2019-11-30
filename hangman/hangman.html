@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<script src="hangman.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+    
+
+		window.onload = () => {
+				
+			let xmlhttp = new XMLHttpRequest();
+			let url = "/startNewGame";
+
+			xmlhttp.onreadystatechange = function() {
+	    		if (this.readyState == 4 && this.status == 200) {
+	        		
+              gameObj = JSON.parse(this.responseText);
+	   	 		
+	        		setupScreen(gameObj.nameBlank);
+	   	 		}
+			};
+
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();
+
+		}
+	</script>
+
+<body>
+  <table border="1" width="50%">
+  	<tr>
+  		<td align="center" id="optionA" onclick="tryThisLetter('A');">A</td>
+  		<td align="center" id="optionB" onclick="tryThisLetter('B');">B</td>
+  		<td align="center" id="optionC" onclick="tryThisLetter('C');">C</td>
+  		<td align="center" id="optionD" onclick="tryThisLetter('D');">D</td>
+  		<td align="center" id="optionE" onclick="tryThisLetter('E');">E</td>
+  		<td align="center" id="optionF" onclick="tryThisLetter('F');">F</td>
+  		<td align="center" id="optionG" onclick="tryThisLetter('G');">G</td>
+  		<td align="center" id="optionH" onclick="tryThisLetter('H');">H</td>
+  		<td align="center" id="optionI" onclick="tryThisLetter('I');">I</td>
+  		<td align="center" id="optionJ" onclick="tryThisLetter('J');">J</td>
+  		<td align="center" id="optionK" onclick="tryThisLetter('K');">K</td>
+  		<td align="center" id="optionL" onclick="tryThisLetter('L');">L</td>
+  		<td align="center" id="optionM" onclick="tryThisLetter('M');">M</td>
+  		<td align="center" id="optionN" onclick="tryThisLetter('N');">N</td>
+  		<td align="center" id="optionO" onclick="tryThisLetter('O');">O</td>
+  		<td align="center" id="optionP" onclick="tryThisLetter('P');">P</td>
+  		<td align="center" id="optionQ" onclick="tryThisLetter('Q');">Q</td>
+  		<td align="center" id="optionR" onclick="tryThisLetter('R');">R</td>
+  		<td align="center" id="optionS" onclick="tryThisLetter('S');">S</td>
+  		<td align="center" id="optionT" onclick="tryThisLetter('T');">T</td>
+  		<td align="center" id="optionU" onclick="tryThisLetter('U');">U</td>
+  		<td align="center" id="optionV" onclick="tryThisLetter('V');">V</td>
+  		<td align="center" id="optionW" onclick="tryThisLetter('W');">W</td>
+  		<td align="center" id="optionX" onclick="tryThisLetter('X');">X</td>
+  		<td align="center" id="optionY" onclick="tryThisLetter('Y');">Y</td>
+  		<td align="center" id="optionZ" onclick="tryThisLetter('Z');">Z</td>
+
+  	</tr>
+  </table>	
+
+<font size="15"><pre id="blankWordText"></pre></font>
+
+<img id="image" src="zero.png" height="600" width="700">
+
+<font size="15"><pre id="gameResult"></pre></font>
+
+</body>
+</html>

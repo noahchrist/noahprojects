@@ -1,0 +1,22 @@
+{
+  "name": "noahprojects",
+  "version": "1.0.0",
+  "description": "hello world",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrstnsn/noahprojects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrstnsn/noahprojects/issues"
+  },
+  "homepage": "https://github.com/chrstnsn/noahprojects#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,3 +1,0 @@
-# noahprojects
-
-hello world
